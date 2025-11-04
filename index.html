@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandra Fort Comic Teaser</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+    }
+    h1 { color: #333; }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bandra Fort — Comic Teaser</h1>
+    <p>Scroll through and explore glimpses of our digital comic on the history of Bandra Fort.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Bandra_Fort.jpg" alt="Bandra Fort">
+    <p>Want to know all about Bandra Fort?</p>
+    <button onclick="goToCongrats()">Yes, I do!</button>
+  </div>
+
+  <script>
+    function goToCongrats() {
+      window.location.href = "congrats.html";
+    }
+  </script>
+</body>
+</html>

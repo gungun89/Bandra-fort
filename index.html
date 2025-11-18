@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaser</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            text-align: center;
-        }
-        #pdf-container {
-            display: none; 
-            margin-top: 30px;
-        }
-        embed {
-            width: 100%;
-            height: 800px;
-            border: 1px solid #ccc;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandra Fort – Teaser Comic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      margin-top: 20px;
+    }
+    .fallback {
+      margin-top: 20px;
+    }
+    button {
+      padding: 12px 20px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>Do you want to know all about it?</h1>
+  <h1>Do you want to know all about Bandra Fort?</h1>
 
-    <label>
-        <input type="checkbox" id="agreeBox"> Yes, I do
-    </label>
+  <p>Scroll down to view the teaser comic.</p>
 
-    <div id="pdf-container">
-        <h2>Your Teaser</h2>
-        <embed src="teaser.pdf" type="application/pdf">
-    </div>
+  <!-- INLINE PDF VIEWER -->
+  <iframe 
+    src="https://docs.google.com/gview?embedded=true&url=https://gungun89.github.io/Bandra-fort/teaser.pdf">
+  </iframe>
 
-    <script>
-        document.getElementById("agreeBox").addEventListener("change", function() {
-            let box = document.getElementById("agreeBox");
-            let pdf = document.getElementById("pdf-container");
+  <!-- FALLBACK SECTION -->
+  <div class="fallback">
+    <p>If the teaser does not load:</p>
 
-            if (box.checked) {
-                pdf.style.display = "block";
-            } else {
-                pdf.style.display = "none";
-            }
-        });
-    </script>
+    <!-- DIRECT VIEW LINK -->
+    <a href="teaser.pdf" target="_blank">
+      <button>Open PDF</button>
+    </a>
+
+    <!-- DOWNLOAD LINK -->
+    <br><br>
+    <a href="teaser.pdf" download>
+      <button>Download PDF</button>
+    </a>
+  </div>
+
+  <br><br>
+
+  <!-- NEXT PAGE -->
+  <button onclick="location.href='congrats.html'">Continue</button>
 
 </body>
 </html>
+
